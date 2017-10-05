@@ -6,8 +6,9 @@ while True:
     while ret == False:
         ret, frame = cap.read()
         mirror = cv2.flip(frame,flipCode=1)
+        canny = cv2.Canny(frame,100,200)
     #cv2.imshow('frame',frame)
-    cv2.imshow('frame',mirror)
+    cv2.imshow('frame',canny)
     #if cv2.waitkey(1) & 0xFF == ord('q'):
         #break
     cv2.waitKey(1)
